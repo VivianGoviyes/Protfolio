@@ -7,11 +7,11 @@
 }
 body {
   color: white;
-  background-color: #091B2A;
-  /* background: url(wallpaper.jpg) no-repeat; */
+  /* background-color: #091B2A; */
+  background: url(wallpaper.jpg);
   /* height: 100%; */
-  /* background-size: cover;
-  background-position: center; */
+  background-size: cover;
+  background-position: center;
 }
 .header {
   position: fixed;
@@ -64,7 +64,7 @@ body {
   /* background: url(wallpaper.jpg) no-repeat;
   background-size: cover;
   background-position: center; */
-  background-color: #091B2A;
+  /* background-color: #091B2A; */
   display: flex;
   align-items: center;
   padding: 70px 10% 0;
@@ -153,6 +153,9 @@ body {
   position: absolute;
   top: 14%;
   left: 55%;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
   
 }
 /* About me section */
@@ -171,12 +174,18 @@ body {
   border-radius: 8px;
   margin-top: 50px;
   margin-left: 30px;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
   /* width: 300px; */
   /* height: 300px;  */
 }
 
 .about-text h2 {
   font-size: 60px;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
 }
 .about-text h2 span {
   color: #0ef;
@@ -193,6 +202,9 @@ body {
   font-size: 20px;
   line-height: 1.4;
   margin-bottom: 4rem;
+  opacity: 0;
+  animation: showText 1s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
 }
 
 #services{
